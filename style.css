@@ -1,0 +1,17 @@
+body{
+    margin: 0px;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container{
+    border:solid red 2px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
