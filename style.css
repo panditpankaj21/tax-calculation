@@ -1,3 +1,5 @@
+
+/* Body CSS */
 body{
     margin: 0px;
     box-sizing: border-box;
@@ -6,12 +8,154 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: sans-serif;
+    position: relative;
 }
 
+
+
+/* Input-Form CSS */
 .main-container{
-    border:solid red 2px;
+    width: 450px;
+    height: 450px;
+    padding: 40px;
+    border: 2px rgb(170, 191, 197) solid;
 }
 form{
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
 }
+.lable-container{
+    margin-top: 15px;   
+}
+input{
+    width: 428px;
+    padding: 10px;
+    margin-top: 1px;
+    border: 2px rgb(170, 191, 197) solid;
+    border-radius: 5px;
+    color: rgb(170, 191, 197);
+}
+.submit-btn{
+    margin-top: 50px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(80, 76, 210);
+    cursor: pointer;
+}
+
+#age_group{
+    border: 2px rgb(170, 191, 197) solid;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1px;
+}
+.input-section{
+    width: 100%;
+    position: relative;
+}
+::placeholder{
+    color: rgb(170, 191, 197);
+}
+
+
+
+/* Tooltip CSS */
+#err-age-group{
+    top: 11px;
+    right: 20px;
+}
+#err-annual-income, 
+#err-total-deductions, 
+#err-extra-income, 
+#err-age-group{
+    visibility: hidden;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: rgb(170, 191, 197);
+    cursor: pointer;
+    border: 1.5px rgb(170, 191, 197) solid;
+    border-radius: 100%;
+    padding: 0px 4px;
+    font-size: small;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(58, 77, 82);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+ 
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+    /* error css */
+    .error{
+        display: inline-block;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        font-weight: 600;
+        padding: 1px 6px;
+    }
+
+
+    /* Result CSS */
+    #result-container{
+        visibility: hidden;
+        position: absolute;
+        width: 700px;
+        height: 450px;
+        border: 2px rgb(170, 191, 197) solid;
+        background-color: white;    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:0px;
+    }
+    .result-mssg{
+        text-align: center  ;
+    }
+    #close-btn{
+        padding: 10px 25px;
+        border: none;
+        color: white;
+        background-color: rgb(80, 76, 210);
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 30px;
+    }

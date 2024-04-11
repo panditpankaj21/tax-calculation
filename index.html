@@ -4,17 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="main-container">
-        <form action="" class="">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+        <form id="myForm">
+            <div class="lable-container">
+                <label for="annual_income">Enter gross annual income</label>
+                <div class="tooltip">?
+                    <span class="tooltiptext">Gross annual income is your total salary in a year deductions</span>
+                </div>
+            </div>
+            
+            <div class="input-section">
+                <input 
+                    type="text"
+                    placeholder="Enter gross annual income"
+                    id="annual_income"
+                >
+                <div class="tooltip error" id="err-annual-income">!
+                    <span class="tooltiptext">Please enter numbers only</span>
+                </div>
+            </div>
+
+            <div class="lable-container">
+                <label for="extra_income">Enter extra income</label>
+                <div class="tooltip">?
+                    <span class="tooltiptext">extra income</span>
+                </div>
+            </div>
+            <div class="input-section">
+                <input 
+                    type="text"
+                    placeholder="Enter extra income from other sources"
+                    id="extra_income"
+                >
+                <div class="tooltip error" id="err-extra-income">!
+                    <span class="tooltiptext">Please enter numbers only</span>
+                </div>
+            </div>
+
+            <div class="lable-container">
+                <label for="age_group">Enter age group</label>
+                <div class="tooltip">?
+                    <span class="tooltiptext">age group </span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <select id="age_group">
+                    <option disabled selected value="">Select an option</option>
+                    <option value="&lt;40">&lt;40</option>
+                    <option value="&gt;=40 &amp; &lt; 60">&gt;=40 &amp; &lt; 60</option>
+                    <option value="&gt;=60">&gt;=60</option>
+                </select>
+                <div class="tooltip error" id="err-age-group">!
+                    <span class="tooltiptext">Input field is mandatory</span>
+                </div>
+            </div>
+
+            <div class="lable-container">
+                <label for="total_deductions">Enter total applicable deductions</label>
+                <div class="tooltip" >?
+                    <span class="tooltiptext">total applicable deductions</span>
+                </div>
+            </div>
+            <div class="input-section">
+                <input 
+                    type="text"
+                    placeholder="Add total applicable deductions"
+                    id="total_deductions"
+                >
+                <div class="tooltip error" id="err-total-deductions">!
+                    <span class="tooltiptext">Please enter numbers only</span>
+                </div>
+            </div>
+
+
+            <input 
+                type="submit" 
+                class="submit-btn"
+            >
         </form>
     </div>
+    <div id="result-container">
+        <div class="result-mssg">
+            <h2 class="result-heading">Your overall income will be</h2>
+            <p id="tax-result">12,000</p>
+            <p>after tax deductions</p>
+            <button id="close-btn">close</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
